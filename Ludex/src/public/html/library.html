@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Librería — Ludex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/views.css">
+</head>
+<body>
+  <aside class="sidebar-desktop" aria-hidden="true">
+    <nav class="side-nav-compact">
+      <button class="side-item"><span>Inicio</span></button>
+      <button class="side-item"><span>Notificaciones</span></button>
+      <button class="side-item"><span>Juegos deseados</span></button>
+      <button class="side-item active"><span>Librería</span></button>
+    </nav>
+  </aside>
+
+  <header class="page-header">
+    <div class="header-left">
+      <button class="icon-btn" aria-label="Volver">←</button>
+      <h1>Ludex</h1>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Opciones">⋯</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="library-list">
+      <article class="lib-card">
+        <img class="lib-thumb" src="images/illus1.jpg" alt="Cyber City">
+        <div class="lib-body">
+          <h3>Cyber City</h3>
+          <p class="muted">Explora las calles de una ciudad futurista llena de secretos y aventuras.</p>
+          <div class="lib-footer">
+            <span class="small muted">15 min 30 sec left</span>
+            <div>
+              <span class="status-pill in-progress">en proceso</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="lib-card">
+        <img class="lib-thumb" src="images/illus2.jpg" alt="Bosque Magico">
+        <div class="lib-body">
+          <h3>Bosque Mágico</h3>
+          <p class="muted">Sumérgete en un bosque encantado lleno de criaturas mágicas y sorpresas.</p>
+          <div class="lib-footer">
+            <span></span>
+            <div>
+              <button class="btn primary small">Jugar Ahora</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="lib-card">
+        <img class="lib-thumb" src="images/illus3.jpg" alt="Castillo Antiguo">
+        <div class="lib-body">
+          <h3>Castillo Antiguo</h3>
+          <p class="muted">Descubre los secretos de un castillo ancestral y sus legendarias historias.</p>
+          <div class="lib-footer">
+            <span></span>
+            <div>
+              <button class="btn primary small">Jugar Ahora</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="nav-btn">🏠</button>
+    <button class="nav-btn">🔔</button>
+    <button class="nav-btn">⭐</button>
+    <button class="nav-btn active">📚</button>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crear cuenta — Ludex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+  <main class="page">
+    <div class="card" role="region" aria-labelledby="card-title">
+      <header class="card-header">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden focusable="false" role="img">
+            <circle cx="12" cy="12" r="10" fill="#3366ff"/>
+            <path d="M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0z" fill="#fff" opacity="0.12"/>
+          </svg>
+          <span class="brand"><a href="../html/index.html">Ludex</a></span>
+        </div>
+
+        <h1 id="card-title" class="title">Create your account</h1>
+        <p class="subtitle">Join the gaming community</p>
+      </header>
+
+      <div class="card-body">
+        <!-- Social buttons row: Google + Facebook -->
+        <div class="social-row">
+          <button class="btn social google" id="googleBtn" type="button" aria-label="Continuar con Google">
+            <!-- Simple Google 'G' mark -->
+            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden focusable="false" role="img">
+              <path fill="#EA4335" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C35 4 30.9 2 24 2 14.9 2 7.6 7 4 14.2l7.4 5.7C13 15.1 18 9.5 24 9.5z"/>
+              <path fill="#34A853" d="M46.5 24.5c0-1.6-.2-2.8-.6-4H24v8h12.7c-.5 3-2.3 5.6-5 7.1l7.7 6c4.5-4.2 7.1-10.3 7.1-17.1z"/>
+              <path fill="#4A90E2" d="M11.4 28.9c-.6-1.7-1-3.5-1-5.4 0-1.9.4-3.7 1-5.4L4 12.4C1.4 16.2 0 20.9 0 26c0 5.1 1.4 9.8 4 13.6l7.4-5.7z"/>
+              <path fill="#FBBC05" d="M24 44c6.9 0 12.9-2.4 17.3-6.5l-8.8-6.8C29.9 32.3 27.1 33 24 33c-6 0-11-5.6-12.6-13.3L3.9 27.6C7.6 35 14.7 44 24 44z"/>
+            </svg>
+            Continue with Google
+          </button>
+
+          <button class="btn social fb" id="facebookBtn" type="button" aria-label="Continuar con Facebook">
+            <!-- Simple Facebook 'f' -->
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false" role="img">
+              <path fill="#1877F2" d="M22 12.1C22 6.5 17.5 2 11.9 2S2 6.5 2 12.1c0 5 3.7 9.1 8.6 9.9v-7h-2.6v-2.9H10.6V9.7c0-2.6 1.6-4 4-4 1.2 0 2.4.2 2.4.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8v2.1h3l-.5 2.9h-2.4v7C18.3 21.2 22 17.1 22 12.1z"/>
+            </svg>
+            Continue with Facebook
+          </button>
+        </div>
+
+        <div class="divider"><span>or</span></div>
+
+        <form id="registerForm" class="form" autocomplete="on" novalidate>
+          <div class="grid two-col name-username">
+            <label class="field">
+              <span class="field-label">Full Name</span>
+              <input type="text" name="fullname" placeholder="Enter your full name" required>
+            </label>
+
+            <label class="field">
+              <span class="field-label">User name</span>
+              <input type="text" name="username" placeholder="Choose a username" required>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </label>
+
+          <div class="grid two-col">
+            <label class="field">
+              <span class="field-label">Password</span>
+              <div class="pw-wrapper">
+                <input id="password" type="password" name="password" placeholder="Create password" minlength="6" required>
+                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="password">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 5c-7 0-11 6-11 7s4 7 11 7 11-6 11-7-4-7-11-7z" fill="none" stroke="#6b7280" stroke-width="1.2"/><circle cx="12" cy="12" r="3" fill="#6b7280"/></svg>
+                </button>
+              </div>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Confirm Password</span>
+              <div class="pw-wrapper">
+                <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
+                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="confirmPassword">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 5c-7 0-11 6-11 7s4 7 11 7 11-6 11-7-4-7-11-7z" fill="none" stroke="#6b7280" stroke-width="1.2"/><circle cx="12" cy="12" r="3" fill="#6b7280"/></svg>
+                </button>
+              </div>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Número de teléfono</span>
+            <input type="tel" name="phone" placeholder="+57 300 000 0000" inputmode="tel">
+          </label>
+
+          <div class="grid two-col">
+            <label class="field">
+              <span class="field-label">Date of Birth (Optional)</span>
+              <input type="date" name="dob" aria-label="Date of birth">
+            </label>
+
+            <label class="field">
+              <span class="field-label">Country</span>
+              <select name="country" required>
+                <option value="">Select your country</option>
+                <option>Colombia</option>
+                <option>Chile</option>
+                <option>Argentina</option>
+                <option>United States</option>
+                <option>Spain</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- Gaming interests (checkbox pills) -->
+          <div class="field">
+            <span class="field-label">Gaming Interests</span>
+            <div class="interests" role="group" aria-label="Gaming interests">
+              <!-- accessible structure: input + span; label wraps both so clicking works -->
+              <label class="pill"><input type="checkbox" name="interest" value="Action"><span>Action</span></label>
+              <label class="pill"><input type="checkbox" name="interest" value="RPG"><span>RPG</span></label>
+              <label class="pill"><input type="checkbox" name="interest" value="Strategy"><span>Strategy</span></label>
+              <label class="pill"><input type="checkbox" name="interest" value="Sports"><span>Sports</span></label>
+              <label class="pill"><input type="checkbox" name="interest" value="Adventure"><span>Adventure</span></label>
+            </div>
+          </div>
+
+          <label class="field checkbox-field">
+            <input type="checkbox" name="terms" required>
+            <span>I agree to the Terms of Service and Privacy Policy.</span>
+          </label>
+
+          <div class="actions">
+            <button type="submit" class="btn primary" id="createBtn">Create Account</button>
+          </div>
+
+          <p class="small muted">Already have an account? <a href="../html/login.html" class="link">Sign in</a></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // show/hide password toggles
+    document.querySelectorAll('.pw-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var targetId = btn.dataset.target;
+        var target = document.getElementById(targetId);
+        if(!target) return;
+        if(target.type === 'password'){
+          target.type = 'text';
+          btn.setAttribute('aria-pressed','true');
+        } else {
+          target.type = 'password';
+          btn.setAttribute('aria-pressed','false');
+        }
+      });
+    });
+
+    // Simple submit validation: check password match & terms
+    document.getElementById('registerForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var pw = document.getElementById('password').value;
+      var cpw = document.getElementById('confirmPassword').value;
+      var terms = document.querySelector('input[name="terms"]').checked;
+      if(pw !== cpw){
+        alert('Passwords do not match.');
+        return;
+      }
+      if(!terms){
+        alert('You must accept the terms.');
+        return;
+      }
+      // TODO: replace with real submission (fetch / navigation)
+      alert('Cuenta creada (placeholder).');
+    });
+
+    // social placeholders
+    document.getElementById('googleBtn').addEventListener('click', function(){ alert('Google sign-in (placeholder)'); });
+    document.getElementById('facebookBtn').addEventListener('click', function(){ alert('Facebook sign-in (placeholder)'); });
+  </script>
+</body>
+</html>

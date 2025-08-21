@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Notificaciones — Ludex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/views.css">
+</head>
+<body>
+  <!-- Sidebar (desktop only) -->
+  <aside class="sidebar-desktop" aria-hidden="true">
+    <nav class="side-nav-compact">
+      <button class="side-item active"><span>Inicio</span></button>
+      <button class="side-item"><span>Notificaciones</span></button>
+      <button class="side-item"><span>Juegos deseados</span></button>
+      <button class="side-item"><span>Librería</span></button>
+    </nav>
+  </aside>
+
+  <header class="page-header">
+    <div class="header-left">
+      <button class="icon-btn" aria-label="Volver">←</button>
+      <h1>Notificaciones</h1>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Ajustes" title="Ajustes">⚙️</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="notif-section">
+      <h2 class="section-title">Hoy</h2>
+
+      <ul class="notif-list">
+        <li class="notif-item">
+          <img class="thumb" src="images/game1.jpg" alt="Juego mini">
+          <div class="notif-content">
+            <div class="notif-head">
+              <strong class="notif-title">Nuevos Juegos Lanzados</strong>
+              <time class="time">1h</time>
+            </div>
+            <p class="notif-sub">Ludex Actualizaciones — 2 juegos añadidos</p>
+            <div class="notif-actions">
+              <button class="btn-ghost small">+</button>
+              <button class="btn-ghost small">🔗</button>
+              <button class="btn-play small" aria-label="Play">▶</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="notif-item">
+          <img class="thumb" src="images/game2.jpg" alt="Juego mini">
+          <div class="notif-content">
+            <div class="notif-head">
+              <strong class="notif-title">Mis juegos favoritos</strong>
+              <time class="time">2h</time>
+            </div>
+            <p class="notif-sub">Jugador Entusiasta — Nueva reseña</p>
+            <div class="notif-actions">
+              <button class="btn-ghost small">+</button>
+              <button class="btn-ghost small">💬</button>
+              <button class="btn-play small" aria-label="Play">▶</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="notif-section">
+      <h2 class="section-title">Anterior</h2>
+      <ul class="notif-list">
+        <li class="notif-item">
+          <img class="thumb" src="images/game3.jpg" alt="Juego mini">
+          <div class="notif-content">
+            <div class="notif-head">
+              <strong class="notif-title">Cómo funcionan los modos</strong>
+              <time class="time">18 d</time>
+            </div>
+            <p class="notif-sub">Experto Fiscal — guía rápida</p>
+            <div class="notif-actions">
+              <button class="btn-ghost small">+</button>
+              <button class="btn-ghost small">🔖</button>
+              <button class="btn-play small" aria-label="Play">▶</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- bottom nav (mobile) -->
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="nav-btn">🏠</button>
+    <button class="nav-btn active">🔔</button>
+    <button class="nav-btn">⭐</button>
+    <button class="nav-btn">📚</button>
+  </nav>
+</body>
+</html>

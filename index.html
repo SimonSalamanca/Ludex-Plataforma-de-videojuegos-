@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludex - Requerimientos Funcionales</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+        color: #333;
+    }
+    header {
+        background: #222;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    main {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    table, th, td {
+        border: 1px solid #ccc;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    .requerimiento {
+        border: 1px solid #ddd;
+        background: #f4f4f4;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+    .titulo-req {
+        font-weight: bold;
+        background: #e2e2e2;
+        padding: 5px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Ludex</h1>
+    <p>Requerimientos funcionales y no funcionales</p>
+    <p><strong>Fecha:</strong> 06/08/2025</p>
+    <p><strong>Autores:</strong> Diego Casas R., Cristian Guillermo M., Simón Salamanca V.</p>
+    <p><strong>Universidad Manuela Beltrán - Ingeniería Web</strong></p>
+</header>
+
+<main>
+    <h2>Contenido</h2>
+    <ul>
+        <li>Ideas de proyecto</li>
+        <li>Definición general</li>
+        <li>Antecedentes</li>
+        <li>Requerimientos funcionales</li>
+        <li>Requerimientos no funcionales</li>
+        <li>Alcance del sistema</li>
+        <li>Tecnologías seleccionadas</li>
+    </ul>
+
+    <h2>3 ideas de proyecto</h2>
+    <table>
+        <tr>
+            <th>Idea</th>
+            <th>Descripción</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <td>Ludex (Plataforma web de distribución de videojuegos)</td>
+            <td>Tienda virtual tipo Steam/Epic Games que permite a desarrolladores independientes publicar, vender y gestionar sus videojuegos, y a los jugadores adquirirlos y disfrutarlos.</td>
+            <td>Alta demanda, impacto positivo en desarrolladores, potencial de ingresos.</td>
+            <td>Alta competencia, requiere buena infraestructura de seguridad y pagos.</td>
+        </tr>
+        <tr>
+            <td>SkillUp (Plataforma de cursos interactivos en línea)</td>
+            <td>Portal web para que expertos creen y vendan cursos interactivos con videos, cuestionarios y certificaciones.</td>
+            <td>Creciente mercado de e-learning, escalabilidad global.</td>
+            <td>Alta competencia, producción inicial costosa.</td>
+        </tr>
+        <tr>
+            <td>EcoTrack (App web para gestión de reciclaje)</td>
+            <td>Plataforma para conectar usuarios con centros de reciclaje y recompensar con puntos por materiales reciclados.</td>
+            <td>Contribuye al medio ambiente, integración con municipios y ONGs.</td>
+            <td>Dependencia de acuerdos con centros de reciclaje, mercado inicial limitado.</td>
+        </tr>
+    </table>
+
+    <h2>Definición general del proyecto</h2>
+    <p><strong>Problema:</strong> La industria de videojuegos está en crecimiento, pero los desarrolladores independientes enfrentan barreras como altos costos y procesos de verificación largos.</p>
+    <p><strong>Solución:</strong> Plataforma que facilite comercializar productos de forma segura y económica.</p>
+    <p><strong>Justificación:</strong> Reducir barreras, promover la participación de nuevos creadores y mejorar el ecosistema de videojuegos.</p>
+    <p><strong>Usuario final:</strong> Desarrolladores independientes, estudios pequeños, jugadores casuales y competitivos.</p>
+    <p><strong>Utilidad:</strong> Espacio seguro y asequible para vender videojuegos, con herramientas de gestión y visibilidad.</p>
+
+    <h2>Antecedentes</h2>
+    <p>Comparativa con plataformas como Steam y Epic Games Store.</p>
+
+    <h2>Requerimientos Funcionales</h2>
+    <div class="requerimiento">
+        <div class="titulo-req">RF01 Registro</div>
+        <p>Permitir registro de usuarios con datos personales y verificación por correo electrónico.</p>
+    </div>
+    <div class="requerimiento">
+        <div class="titulo-req">RF02 Inicio de sesión</div>
+        <p>Inicio con correo o apodo y contraseña. Usuarios no registrados solo visualizan contenido.</p>
+    </div>
+    <!-- Aquí seguirías listando RF03 a RF17 de la misma forma -->
+    
+    <h2>Requerimientos No Funcionales</h2>
+    <div class="requerimiento">
+        <div class="titulo-req">RNF01 Tiempo de respuesta</div>
+        <p>Respuestas en menos de 3 segundos bajo carga normal.</p>
+    </div>
+    <!-- Aquí seguirías listando RNF02 a RNF10 -->
+
+    <h2>Alcance del sistema</h2>
+    <ul>
+        <li>No incluye foros, streaming, VR o mods en la primera versión.</li>
+        <li>Pasarela limitada a tarjetas y PayPal.</li>
+        <li>No habrá aplicación de escritorio nativa.</li>
+    </ul>
+
+    <h2>Tecnologías seleccionadas</h2>
+    <p>HTML, CSS, JavaScript, MongoDB, APIs externas, Visual Studio Code, GitHub, Jira, Figma.</p>
+</main>
+
+</body>
+</html>

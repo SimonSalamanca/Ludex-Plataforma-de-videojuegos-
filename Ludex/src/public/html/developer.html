@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ludex — Panel de Desarrollador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/developer.css">
+</head>
+<body>
+  <!-- HEADER oscuro con marca -->
+  <header class="topbar dev">
+    <div class="brand">
+      <!-- gamepad -->
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden>
+        <path d="M7 10h10l2 2a3 3 0 1 0 3-3v0a3 3 0 0 0-3 3l-2-2H7l-2 2a3 3 0 1 0-3-3v0a3 3 0 0 0 3 3l2-2z" fill="#4f7bff"/>
+      </svg>
+      <span class="brand-name">Ludex</span>
+    </div>
+  </header>
+
+  <main class="main dev-page" id="mainContent">
+    <!-- JUEGOS SUBIDOS -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Juegos Subidos</h2>
+        <a href="./add-game.html" class="btn primary">Agregar un nuevo juego</a>
+      </div>
+
+      <article class="game-card uploaded">
+        <header class="game-head">
+          <h3><em>Aventura Galáctica</em></h3>
+          <button class="btn danger small">Eliminar</button>
+        </header>
+        <p class="meta">Fecha de carga: 15 de septiembre de 2023</p>
+        <p class="desc">Una emocionante aventura espacial.</p>
+        <div class="actions">
+          <button class="btn secondary small">Editar</button>
+        </div>
+      </article>
+
+      <article class="game-card uploaded">
+        <header class="game-head">
+          <h3><em>Carreras Extremas</em></h3>
+          <button class="btn danger small">Eliminar</button>
+        </header>
+        <p class="meta">Fecha de carga: 8 de agosto de 2023</p>
+        <p class="desc">Compite en rápidas carreras épicas.</p>
+        <div class="actions">
+          <button class="btn secondary small">Editar</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- JUEGOS VENDIDOS -->
+    <section class="section">
+      <div class="section-header with-link">
+        <h2>Juegos Vendidos</h2>
+        <a href="#" class="see-more" aria-label="Ver todos">›</a>
+      </div>
+
+      <article class="game-card sold">
+        <h3><em>Misterios del Bosque</em></h3>
+        <p class="meta">Total vendidos: 150</p>
+        <p class="desc">Explora los secretos del bosque.</p>
+      </article>
+
+      <article class="game-card sold">
+        <h3><em>Batalla de Robots</em></h3>
+        <p class="meta">Total vendidos: 200</p>
+        <p class="desc">Domina el campo de batalla robótico.</p>
+      </article>
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="section">
+      <h2>Estadísticas de Venta</h2>
+
+      <!-- Placeholder de gráfico de barras -->
+      <div class="stats-card" role="img" aria-label="Gráfico de barras de ventas">
+        <div class="chart bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <!-- Placeholder de gráfico de líneas -->
+      <div class="stats-card" role="img" aria-label="Gráfico de líneas de ventas">
+        <div class="chart line">
+          <div class="spark"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AYUDA -->
+    <section class="section">
+      <h2>Ayuda</h2>
+      <div class="help-card">
+        <p>Para ayuda con la navegación o funciones, por favor consulta nuestra guía de usuario o contacta soporte.</p>
+        <a href="#" class="btn primary align-end">Subir Actualización</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- NAV INFERIOR (solo 2 botones; se mostrará solo en mobile vía CSS) -->
+  <nav class="bottom-nav dev" aria-label="Navegación">
+    <a class="nav-btn" aria-label="Inicio" href="index.html">🏠</a>
+    <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">📄</a>
+  </nav>
+</body>
+</html>

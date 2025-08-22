@@ -8,6 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuBtn = document.getElementById('menuBtn');
   const sidebar = document.getElementById('sidebar');
   const closeSidebar = document.getElementById('closeSidebar');
+    // Botón de carrito: redirige al carrito de compras
+  const cartBtn = document.getElementById("cartBtn");
+  if (cartBtn) {
+    cartBtn.addEventListener("click", () => {
+      window.location.href = "./carrito.html";
+    });
+  }
+
 
   let selectedCategory = 'All Games';
   let selectedPrice = 'all';

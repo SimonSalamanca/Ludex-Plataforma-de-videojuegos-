@@ -4,88 +4,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ludex — Buscar juegos</title>
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (para iconos coherentes) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tu CSS principal -->
   <link rel="stylesheet" href="../css/browse.css">
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-left">
-      <button id="menuBtn" class="icon-btn" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></svg>
-      </button>
-
-      <!-- menu logo: shown ONLY on large screens via CSS -->
-      <div class="menu-logo" aria-hidden="true">
-        <svg class="brand-mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="10" fill="#3366ff"/></svg>
-      </div>
 
       <div class="brand">
-        <svg class="brand-mark-mobile" width="20" height="20" viewBox="0 0 24 24" aria-hidden><circle cx="12" cy="12" r="10" fill="#3366ff"/></svg>
+        <svg class="brand-mark-mobile" width="20" height="20" viewBox="0 0 24 24" aria-hidden>
+          <circle cx="12" cy="12" r="10" fill="#3366ff"/>
+        </svg>
         <span class="brand-name">Ludex</span>
       </div>
     </div>
 
     <div class="topbar-right">
       <button id="cartBtn" class="icon-btn" aria-label="Carrito" title="Carrito">
-        <svg width="20" height="20" viewBox="0 0 24 24">
-          <path d="M6 6h15l-1.5 9h-11z" fill="none" stroke="#111" stroke-width="1.2"/>
-        </svg>
+        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" aria-hidden></i></a>
       </button>
-      <button class="icon-btn" aria-label="Perfil" title="Perfil" onclick="window.location.href='Profile.html';"> 
-  <svg width="20" height="20" viewBox="0 0 24 24">
-    <circle cx="12" cy="8" r="3"/>
-    <path d="M4 20c0-3.3 4.8-6 8-6s8 2.7 8 6" fill="none" stroke="#111" stroke-width="1.2"/>
-  </svg>
-</button>
+      <button class="icon-btn" aria-label="Perfil" title="Perfil">
+        <a href="./"><i class="fa-regular fa-user" aria-hidden></i></a>
+      </button>
     </div>
   </header>
-
-  <!-- Sidebar / Drawer (menu lateral para desktop) -->
-  <aside id="sidebar" class="sidebar" aria-hidden="true">
-    <div class="sidebar-inner">
-      <button id="closeSidebar" class="close-sidebar" aria-label="Cerrar menu">✕</button>
-
-      <!-- SIDE NAV: ahora contiene las mismas secciones que el bottom nav -->
-      <nav class="side-nav" aria-label="Navegación lateral">
-        <ul>
-          <li><button class="side-item active" data-section="home" aria-pressed="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden><path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="#111"/></svg>
-            <span><a href="#">Inicio</a></span>
-          </button></li>
-
-          <li><button class="side-item" data-section="notifications">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden><path d="M12 22a2 2 0 0 0 2-2H10a2 2 0 0 0 2 2zm6-6V11a6 6 0 0 0-5-5.9V4a1 1 0 0 0-2 0v1.1A6 6 0 0 0 6 11v5l-2 2v1h16v-1l-2-2z" fill="#111"/></svg>
-            <span><a href="./notifications.html">Notificaciones</a></span>
-          </button></li>
-
-          <li><button class="side-item" data-section="wishlist">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden><path d="M12 21s-7.5-4.5-9.5-7C-0.3 8.6 3 4 8 6c1.9.8 4 3.7 4 3.7S15.8 6.8 17.5 6C22.5 4 24.3 8.6 21.5 14 19.5 16.5 12 21 12 21z" fill="#111"/></svg>
-            <span><a href="./wishlist.html">Juegos deseados</a></span>
-          </button></li>
-
-          <li><button class="side-item" data-section="library">
-            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden><path d="M4 19h16v2H4zm2-18h2v16H6V1zm4 0h2v16h-2V1zm4 0h2v16h-2V1z" fill="#111"/></svg>
-            <span><a href="./library.html">Librería</a></span>
-          </button></li>
-        </ul>
-      </nav>
-
-      <!-- copiar filtros rápidos (opcional) -->
-      <div class="side-filters">
-        <h4>Filtros rápidos</h4>
-        <div class="filter-group side">
-          <button class="pill category-pill" data-category="All Games">All Games</button>
-          <button class="pill category-pill" data-category="Adventure">Adventure</button>
-          <button class="pill category-pill" data-category="RPG">RPG</button>
-        </div>
-        <div class="filter-group small side">
-          <button class="pill price-pill" data-price="all">Todos</button>
-          <button class="pill price-pill" data-price="free">Gratuitos</button>
-          <button class="pill price-pill" data-price="lt5">Menores de 5$</button>
-        </div>
-      </div>
-    </div>
-  </aside>
 
   <main class="main" id="mainContent">
     <!-- Search -->
@@ -156,14 +105,17 @@
     </section>
   </main>
 
-  <!-- bottom navigation (mobile) -->
+  <!-- Menú inferior (SOLO móvil / small screens) -->
   <nav class="bottom-nav" aria-label="Navegación principal">
-    <button class="nav-btn" aria-label="Inicio">🏠</button>
-    <button class="nav-btn" aria-label="Notificaciones">🔔</button>
-    <button class="nav-btn active" aria-label="Juegos deseados">⭐</button>
-    <button class="nav-btn" aria-label="Librería">📚</button>
+    <a href="./browse.html" class="nav-item active" data-section="home"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+    <a href="./notifications.html" class="nav-item" data-section="notifications"><i class="fa-solid fa-bell"></i><span>Alertas</span></a>
+    <a href="./wishlist.html" class="nav-item" data-section="wishlist"><i class="fa-solid fa-star"></i><span>Favoritos</span></a>
+    <a href="./library.html" class="nav-item" data-section="library" title="Biblioteca" aria-label="Biblioteca">
+      <i class="fa-solid fa-book" aria-hidden></i>
+      <span>Biblioteca</span>
+    </a>
   </nav>
 
-  <script src="../js/browse.js"></script>
+  <script src="./js/browse.js" defer></script>
 </body>
 </html>

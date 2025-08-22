@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ludex — Panel de Desarrollador</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="../css/developer.css">
 </head>
 <body>
@@ -19,7 +20,14 @@
     </div>
 
     <!-- Botón Salir de modo desarrollador -->
-    <button class="btn-exit-dev" onclick="salirModoDesarrollador()">Salir de modo desarrollador</button>
+    <button 
+      class="btn-exit-dev" 
+     onclick="window.location.href='browse.html'" 
+     aria-label="Salir al inicio">
+     <i class="fa-solid fa-house"></i>
+        </button>
+
+
   </header>
 
   <main class="main dev-page" id="mainContent">
@@ -38,7 +46,8 @@
         <p class="meta">Fecha de carga: 15 de septiembre de 2023</p>
         <p class="desc">Una emocionante aventura espacial.</p>
         <div class="actions">
-          <button class="btn secondary small">Editar</button>
+            <button class="btn secondary small" onclick="window.location.href='edit-game.html'">Editar
+          </button>
         </div>
       </article>
 
@@ -104,16 +113,20 @@
       <h2>Ayuda</h2>
       <div class="help-card">
         <p>Para ayuda con la navegación o funciones, por favor consulta nuestra guía de usuario o contacta soporte.</p>
-        <a href="#" class="btn primary align-end">Subir Actualización</a>
+        <a href="update-Developer.html" class="btn primary align-end">Subir Actualización</a>
       </div>
     </section>
   </main>
 
-  <!-- NAV INFERIOR (solo 2 botones; se mostrará solo en mobile vía CSS) -->
+      <!-- NAV INFERIOR  -->
   <nav class="bottom-nav dev" aria-label="Navegación">
-    <a class="nav-btn" aria-label="Inicio" href="index.html">🏠</a>
-    <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">🚪</a>
-  </nav>
+    <a class="nav-btn" aria-label="Inicio" href="./developer.html">
+      <i class="fa-solid fa-house"></i>
+     </a>
+      <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">
+    <i class="fa-solid fa-user-gear"></i>
+   </a>
+</nav>
 
   <script>
     function salirModoDesarrollador() {

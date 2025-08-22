@@ -25,6 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #333;
+  position: relative; 
 }
 
 .brand {
@@ -41,7 +42,7 @@ body {
 .brand-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #3366ff; /* Texto azul al lado del logo */
+  color: #3366ff; 
 }
 
 /* =================== MAIN =================== */
@@ -51,6 +52,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  /* nuevo: ancho máximo */
+  max-width: 1200px;  /* puedes ajustar este valor (ej: 1000px, 1100px) */
+  margin: 0 auto;     /* centra el contenido */
+  width: 100%;
 }
 
 .section {
@@ -109,7 +115,30 @@ h2 {
 .actions {
   margin-top: 0.5rem;
 }
+/* =================== EXIT BUTTON =================== */
+.btn-exit-dev {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #eee;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
+.btn-exit-dev:hover {
+  color: #4f7bff;
+  transform: scale(1.1);
+}
+
+/* En móviles (<= 768px) ocultamos el botón */
+@media (max-width: 768px) {
+  .btn-exit-dev {
+    display: none;
+  }
+}
 /* =================== BUTTONS =================== */
 .btn {
   display: inline-block;
@@ -237,16 +266,21 @@ h2 {
   left: 0;
   right: 0;
   background: #1b1b1b;
-  display: none; /* escondido por defecto */
+  display: none; /* oculto en escritorio */
   justify-content: space-around;
   padding: 0.5rem 0;
   border-top: 1px solid #333;
 }
 
 .bottom-nav.dev .nav-btn {
-  color: #ccc;
-  font-size: 1.5rem;
+  color: #aaa;
+  font-size: 1.4rem;
   text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+}
+.bottom-nav.dev .nav-btn:hover {
+  color: #4f7bff;
+  transform: scale(1.1);
 }
 
 .bottom-nav.dev .nav-btn.active {

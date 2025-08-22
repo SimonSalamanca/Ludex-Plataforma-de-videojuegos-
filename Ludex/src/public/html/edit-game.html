@@ -12,7 +12,13 @@
   <!-- Encabezado -->
   <header class="header">
     <h1>Editar Informacion</h1>
-    <button class="close-btn">&times;</button>
+        <button class="close-btn">&times;</button>
+
+      <script>
+     document.querySelector(".close-btn").addEventListener("click", () => {
+        window.location.href = "developer.html";
+    });
+    </script>
   </header>
 
   <!-- Formulario -->
@@ -72,11 +78,15 @@
     <button class="btn-primary" onclick="window.location.href='developer.html';">Guardar Cambios</button> 
   </main>
 
-  <!-- Menú inferior -->
-  <footer class="bottom-nav">
-    <a href="./developer.html"><i class="fas fa-home"></i></a>
-    <a href="./Profile.html"><i class="fas fa-arrow-right"></i></a>
-  </footer>
+  <!-- NAV INFERIOR  -->
+  <nav class="bottom-nav dev" aria-label="Navegación">
+    <a class="nav-btn" aria-label="Inicio" href="./developer.html">
+      <i class="fa-solid fa-house"></i>
+     </a>
+      <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">
+    <i class="fa-solid fa-user-gear"></i>
+   </a>
+</nav>
 
 </body>
 </html>

@@ -133,7 +133,7 @@ body {
 
 /* === Bottom Navigation (mobile only) === */
 .bottom-nav {
-  display: none; /* 🔹 Oculto por defecto en todas las vistas */
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -160,7 +160,7 @@ body {
 /* === Responsive === */
 @media (max-width: 768px) {
   .bottom-nav {
-    display: flex; /* 🔹 Solo aparece en móvil */
+    display: flex; 
   }
 }
 

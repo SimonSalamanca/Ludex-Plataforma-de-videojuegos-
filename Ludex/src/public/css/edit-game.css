@@ -17,11 +17,11 @@ body {
 /* ===== Header ===== */
 .header {
   display: flex;
-  justify-content: center; /* Centrado horizontal */
+  justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: #fff; /* Fondo blanco */
-  color: #000; /* Título negro */
+  background: #fff; 
+  color: #000; 
   font-size: 1.4rem;
   font-weight: bold;
   position: sticky;
@@ -36,7 +36,7 @@ body {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #4f7bff; /* Botón de cerrar en color principal */
+  color: #4f7bff; 
   cursor: pointer;
 }
 
@@ -118,7 +118,7 @@ textarea {
   display: block;
   width: 100%;
   padding: 0.8rem;
-  background: #4f7bff; /* Color principal */
+  background: #4f7bff; 
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
@@ -134,7 +134,7 @@ textarea {
 
 /* ===== Bottom Nav ===== */
 .bottom-nav {
-  display: none; /* Oculto por defecto en escritorio */
+  display: none; 
   justify-content: space-around;
   align-items: center;
   padding: 0.8rem 0;
@@ -158,6 +158,6 @@ textarea {
   }
 
   .bottom-nav {
-    display: flex; /* Visible solo en mobile */
+    display: flex; 
   }
 }

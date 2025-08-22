@@ -26,7 +26,7 @@
   </header>
 
   <main class="main">
-    <!-- Product panel (mobile-first) -->
+    <!-- Product panel -->
     <article class="product">
       <div class="media">
         <img src="images/game-detail.jpg" alt="Portada del juego" class="media-img">
@@ -125,7 +125,7 @@
     </section>
   </main>
 
-  <!-- Bottom nav (mobile) -->
+  <!-- Bottom nav -->
   <nav class="bottom-nav" aria-label="Navegación principal">
     <button class="nav-btn" aria-label="Inicio">🏠</button>
     <button class="nav-btn" aria-label="Notificaciones">🔔</button>
@@ -133,7 +133,6 @@
     <button class="nav-btn" aria-label="Librería">📚</button>
   </nav>
 
-  <!-- Optional tiny script to toggle favorite UI (no backend) -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const favInput = document.getElementById('fav');
@@ -144,7 +143,7 @@
           favInput.parentElement.classList.remove('on');
         }
       });
-      // back button placeholder
+ 
       const backBtn = document.getElementById('backBtn');
       backBtn && backBtn.addEventListener('click', function(){ window.history.back(); });
     });

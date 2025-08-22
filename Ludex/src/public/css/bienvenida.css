@@ -1,8 +1,3 @@
-/* ==========================
-   Ludex — styles (mobile+desktop)
-   Mobile-first; at >=900px switches to desktop 2-column layout
-   Prevent horizontal & vertical scroll on large screens
-   ========================== */
 
 :root{
   --bg: #ffffff;
@@ -19,12 +14,12 @@
 }
 
 *{box-sizing:border-box}
-/* prevent any accidental horizontal overflow globally */
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* <-- remove horizontal scrollbar globally */
+  overflow-x: hidden; 
 }
 body{
   min-height:100%;
@@ -35,13 +30,12 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* Outer wrapper that centers and constrains width */
 .wrap{
   margin:0 auto;
   max-width:var(--max-width-mobile);
   height:100vh;
-  overflow-y:auto;      /* only vertical scroll on mobile */
-  overflow-x:hidden;    /* ensure no horizontal scroll */
+  overflow-y:auto;      
+  overflow-x:hidden;    
   scroll-behavior:smooth;
   scroll-snap-type:y mandatory;
   -webkit-overflow-scrolling:touch;
@@ -50,14 +44,13 @@ body{
   padding:8px 0;
 }
 
-/* Desktop container: on wide screens becomes the grid */
 .container-desktop{
-  display:block; /* mobile: keep stacked */
+  display:block; 
   width:100%;
-  overflow-x:hidden; /* prevent child overflow from showing a scrollbar */
+  overflow-x:hidden; 
 }
 
-/* === Sections (mobile stacked) === */
+/* === Sections === */
 section{
   padding:28px 20px;
   min-height:100vh;
@@ -69,7 +62,7 @@ section{
   scroll-snap-align:start;
 }
 
-/* HERO (left on desktop) */
+/* HERO  */
 .hero{
   text-align:center;
   gap:18px;
@@ -123,7 +116,7 @@ p.lead{
 }
 .btn.small{padding:8px 14px;border-radius:10px;font-size:14px}
 
-/* WELCOME / AUTH SECTION (right on desktop) */
+/* WELCOME  */
 .welcome{
   align-items:center;
   width:100%;
@@ -136,8 +129,6 @@ p.lead{
   flex-direction:column;
   align-items:center;
   gap:12px;
-  /* permit internal scroll inside the card if content exceeds its max-height
-     (keeps the page itself static while allowing access to all card content) */
   overflow:auto;
 }
 .welcome-card h2{
@@ -164,7 +155,7 @@ p.lead{
   display:flex;
   gap:12px;
   width:100%;
-  justify-content:flex-start; /* en desktop la alineamos al inicio dentro de la tarjeta */
+  justify-content:flex-start; 
   margin-top:6px;
 }
 
@@ -192,39 +183,36 @@ p.lead{
   box-shadow:0 12px 36px rgba(51,102,255,0.14)
 }
 
-/* Panel CTA inside card (desktop) — hidden on small screens */
 .panel-cta{margin-top:10px;width:100%;display:flex;justify-content:flex-start}
 .panel-cta .access{display:none;}
 
-/* Accessibility focus */
 .btn:focus,.social-btn:focus{outline:3px solid rgba(51,102,255,0.12);outline-offset:3px}
 
 /* ==========================
    DESKTOP (>=900px)
    ========================== */
 @media (min-width: 900px) {
-  /* Prevent scrollbars at document level on desktop */
+
   html, body {
-    overflow: hidden; /* remove vertical and horizontal scroll on desktop */
+    overflow: hidden;
   }
 
   .wrap{
     max-width:var(--container-max);
     height:100vh;
     padding:28px;
-    overflow: hidden; /* no scrolling */
+    overflow: hidden; 
   }
 
   .container-desktop{
     display:grid;
-    /* right column flexible but capped, avoids forcing horizontal scroll */
     grid-template-columns: 1fr minmax(360px, 520px);
     gap:48px;
     align-items:center;
     height:100%;
     padding:20px;
     border-radius:18px;
-    overflow: hidden; /* ensure grid doesn't overflow the viewport */
+    overflow: hidden; 
   }
 
   section{
@@ -266,14 +254,12 @@ p.lead{
     align-items:flex-start;
     width:100%;
     max-width:420px;
-    max-height:80vh; /* ensure card fits vertically in viewport */
-    overflow:auto;   /* but allow internal scrolling if content overflows */
+    max-height:80vh; 
+    overflow:auto; 
   }
 
-  /* Show panel CTA inside card and hide bottom sticky on desktop */
   .panel-cta .access{display:inline-flex}
   .bottom-cta{display:none}
 
-  /* extra safety: ensure page width never exceeds viewport (no horizontal scroll) */
   .wrap, .container-desktop, section { max-width: 100vw; box-sizing: border-box; }
 }

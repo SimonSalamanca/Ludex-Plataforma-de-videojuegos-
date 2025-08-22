@@ -4,30 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Juegos deseados — Ludex</title>
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/views.css">
 </head>
 <body>
-  <aside class="sidebar-desktop" aria-hidden="true">
-    <nav class="side-nav-compact">
-      <button class="side-item"><span>Inicio</span></button>
-      <button class="side-item"><span>Notificaciones</span></button>
-      <button class="side-item active"><span>Juegos deseados</span></button>
-      <button class="side-item"><span>Librería</span></button>
-    </nav>
-  </aside>
-
   <header class="page-header">
-    <div class="header-left">
-      <button class="icon-btn" aria-label="Volver">←</button>
-      <h1>Juegos deseados</h1>
+    <div class="page-left">
+      <!-- pequeño círculo/brand como en la imagen -->
+      <svg class="brand-mark" width="14" height="14" viewBox="0 0 24 24" aria-hidden>
+        <circle cx="12" cy="12" r="10" fill="#3366ff"/>
+      </svg>
+
+      <!-- título de la sección (cámbialo por cada página) -->
+      <span class="page-title">Jueegos deseados</span>
     </div>
-    <div class="header-right">
-      <button class="icon-btn" aria-label="Buscar">🔍</button>
+
+    <!-- icons a la derecha (carrito + perfil) -->
+    <div class="topbar-right">
+      <button id="cartBtn" class="icon-btn" aria-label="Carrito" title="Carrito">
+        <a href="./carrito.html"><i class="fa-solid fa-cart-shopping" aria-hidden></i></a>
+      </button>
+      <button class="icon-btn" aria-label="Perfil" title="Perfil">
+        <a href="./"><i class="fa-regular fa-user" aria-hidden></i></a>
+      </button>
     </div>
   </header>
 
-  <main class="container">
+
+  <!-- Main content (centrado, sin sidebar) -->
+  <main class="container" id="mainContent">
     <section class="wishlist-meta">
       <div class="wishlist-head">
         <div class="star-mark">⭐</div>
@@ -52,11 +64,19 @@
     </section>
   </main>
 
+  <!-- bottom nav (igual estilo que en browse) -->
   <nav class="bottom-nav" aria-label="Navegación principal">
-    <button class="nav-btn">🏠</button>
-    <button class="nav-btn">🔔</button>
-    <button class="nav-btn active">⭐</button>
-    <button class="nav-btn">📚</button>
+    <a href="./browse.html" class="nav-item" data-section="home"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+    <a href="./notifications.html" class="nav-item" data-section="notifications"><i class="fa-solid fa-bell"></i><span>Alertas</span></a>
+    <a href="./wishlist.html" class="nav-item active" data-section="wishlist"><i class="fa-solid fa-star"></i><span>Favoritos</span></a>
+    <a href="./library.html" class="nav-item" data-section="library" title="Biblioteca" aria-label="Biblioteca">
+      <i class="fa-solid fa-book" aria-hidden></i>
+      <span>Biblioteca</span>
+    </a>
+
   </nav>
+
+  <!-- sincroniza visuales si usas browse.js -->
+  <script src="../js/browse.js" defer></script>
 </body>
 </html>

@@ -100,7 +100,7 @@ body {
 
 /* ===== Footer Navigation (Hidden by default) ===== */
 .bottom-nav {
-  display: none; /* oculto en escritorio */
+  display: none;
   justify-content: space-around;
   align-items: center;
   position: fixed;
@@ -118,7 +118,6 @@ body {
   text-decoration: none;
 }
 
-/* ===== Responsive: Show footer in mobile ===== */
 @media (max-width: 768px) {
   .bottom-nav {
     display: flex;

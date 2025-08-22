@@ -39,7 +39,7 @@ img{max-width:100%;display:block}
   padding:12px;
   max-width:420px;
   margin:0 auto;
-  padding-bottom:96px; /* espacio para bottom-nav */
+  padding-bottom:96px; 
 }
 
 /* bottom nav (estilo compartido con browse) */
@@ -193,10 +193,8 @@ button:focus, a:focus, input:focus{ outline:3px solid rgba(51,102,255,0.12); out
 /* hover affordance */
 .icon-btn:hover { background: rgba(51,102,255,0.06); transform: translateY(-1px); }
 
-/* ensure header left title doesn't overflow on small screens */
 .page-title { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:70vw; }
 
-/* if your desktop layout hides bottom-nav, keep header spacing consistent */
 @media (min-width:900px) {
   .page-title { font-size:18px; }
 }

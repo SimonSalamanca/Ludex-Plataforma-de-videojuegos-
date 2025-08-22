@@ -48,7 +48,7 @@
   </main>
 
   <script>
-    // Comportamiento simple: permitir sólo dígitos, pegar, y validar longitud 6
+
     (function(){
       const codeInput = document.getElementById('code');
       const form = document.getElementById('verifyForm');
@@ -74,16 +74,16 @@
           codeInput.focus();
           return;
         }
-        // Placeholder: aquí conecta con tu backend / verificación real
+     
         alert('Código verificado (placeholder): ' + code);
       });
 
       document.getElementById('resendBtn').addEventListener('click', function(){
-        // Placeholder: implementar reenvío real
+    
         alert('Código reenviado (placeholder).');
       });
 
-      // Autofocus on mobile when available
+
       window.addEventListener('load', () => {
         setTimeout(()=>{ codeInput.focus(); }, 300);
       });

@@ -133,7 +133,7 @@ button { font-family: inherit; }
 .filter-group.small .pill { padding:6px 10px; font-size:13px; }
 
 /* ===== CATALOG / CARDS ===== */
-.catalog { margin-top:18px; padding-bottom:96px; } /* padding-bottom para no ocultar por bottom-nav */
+.catalog { margin-top:18px; padding-bottom:96px; } 
 .section-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
 .section-head h2 { margin:0; font-size:18px; font-weight:700; }
 .see-all { color:var(--muted); font-size:14px; }
@@ -216,12 +216,6 @@ body .bottom-nav .nav-item.active i, body .bottom-nav .nav-item.active svg {
   color:#fff;
   box-shadow:0 8px 24px rgba(51,102,255,0.12);
   border-color:transparent;
-}
-
-/* hide bottom-nav on desktop? - KEEP visible on all if desired, otherwise uncomment */
-@media (min-width: var(--bp-desktop)) {
-  /* Si quieres ocultarlo en desktop, descomenta la siguiente línea */
-  /* body .bottom-nav { display:none !important; } */
 }
 
 /* ===== ACCESSIBILITY & INTERACTIONS ===== */

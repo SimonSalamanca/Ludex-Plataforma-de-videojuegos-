@@ -181,7 +181,6 @@ h2 {
   align-self: flex-end;
 }
 
-/* Botón principal grande */
 .btn.primary.large {
   display: block;
   width: 100%;
@@ -193,7 +192,7 @@ h2 {
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  border-radius: 14px; /* Bordes más redondeados */
+  border-radius: 14px; 
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -266,7 +265,7 @@ h2 {
   left: 0;
   right: 0;
   background: #1b1b1b;
-  display: none; /* oculto en escritorio */
+  display: none; /* escondido por defecto */
   justify-content: space-around;
   padding: 0.5rem 0;
   border-top: 1px solid #333;
@@ -287,7 +286,6 @@ h2 {
   color: #4f7bff;
 }
 
-/* Solo en pantallas pequeñas mostramos el nav */
 @media (max-width: 768px) {
   .bottom-nav.dev {
     display: flex;

@@ -27,7 +27,7 @@
         <!-- Social buttons row: Google + Facebook -->
         <div class="social-row">
           <button class="btn social google" id="googleBtn" type="button" aria-label="Continuar con Google">
-            <!-- Simple Google 'G' mark -->
+
             <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden focusable="false" role="img">
               <path fill="#EA4335" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C35 4 30.9 2 24 2 14.9 2 7.6 7 4 14.2l7.4 5.7C13 15.1 18 9.5 24 9.5z"/>
               <path fill="#34A853" d="M46.5 24.5c0-1.6-.2-2.8-.6-4H24v8h12.7c-.5 3-2.3 5.6-5 7.1l7.7 6c4.5-4.2 7.1-10.3 7.1-17.1z"/>
@@ -38,7 +38,7 @@
           </button>
 
           <button class="btn social fb" id="facebookBtn" type="button" aria-label="Continuar con Facebook">
-            <!-- Simple Facebook 'f' -->
+
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false" role="img">
               <path fill="#1877F2" d="M22 12.1C22 6.5 17.5 2 11.9 2S2 6.5 2 12.1c0 5 3.7 9.1 8.6 9.9v-7h-2.6v-2.9H10.6V9.7c0-2.6 1.6-4 4-4 1.2 0 2.4.2 2.4.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8v2.1h3l-.5 2.9h-2.4v7C18.3 21.2 22 17.1 22 12.1z"/>
             </svg>
@@ -112,7 +112,7 @@
             </label>
           </div>
 
-          <!-- Gaming interests (checkbox pills) -->
+          <!-- Gaming interests -->
           <div class="field">
             <span class="field-label">Gaming Interests</span>
             <div class="interests" role="group" aria-label="Gaming interests">
@@ -141,7 +141,7 @@
   </main>
 
   <script>
-    // show/hide password toggles
+
     document.querySelectorAll('.pw-toggle').forEach(function(btn){
       btn.addEventListener('click', function(){
         var targetId = btn.dataset.target;
@@ -157,7 +157,7 @@
       });
     });
 
-    // Simple submit validation: check password match & terms
+
     document.getElementById('registerForm').addEventListener('submit', function(e){
       e.preventDefault();
       var pw = document.getElementById('password').value;
@@ -171,7 +171,7 @@
         alert('You must accept the terms.');
         return;
       }
-      // TODO: replace with real submission (fetch / navigation)
+
       alert('Cuenta creada (placeholder).');
     });
 

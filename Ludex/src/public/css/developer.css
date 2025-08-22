@@ -1,6 +1,4 @@
-/* ===================
-   RESET + BASE
-=================== */
+/* =================== RESET + BASE =================== */
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +17,7 @@ body {
   flex-direction: column;
 }
 
-/* ===================
-   HEADER
-=================== */
+/* =================== HEADER =================== */
 .topbar.dev {
   background-color: #1b1b1b;
   padding: 1rem;
@@ -37,15 +33,18 @@ body {
   gap: 0.5rem;
 }
 
+.brand-mark {
+  width: 24px;
+  height: 24px;
+}
+
 .brand-name {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #fff;
+  color: #3366ff; /* Texto azul al lado del logo */
 }
 
-/* ===================
-   MAIN
-=================== */
+/* =================== MAIN =================== */
 .main {
   flex: 1;
   padding: 1rem;
@@ -75,9 +74,7 @@ h2 {
   font-weight: 600;
 }
 
-/* ===================
-   GAME CARDS
-=================== */
+/* =================== GAME CARDS =================== */
 .game-card {
   background-color: #222;
   padding: 1rem;
@@ -113,9 +110,7 @@ h2 {
   margin-top: 0.5rem;
 }
 
-/* ===================
-   BUTTONS
-=================== */
+/* =================== BUTTONS =================== */
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -157,9 +152,28 @@ h2 {
   align-self: flex-end;
 }
 
-/* ===================
-   STATS CARDS
-=================== */
+/* Botón principal grande */
+.btn.primary.large {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  background-color: #3366ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 14px; /* Bordes más redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.primary.large:hover {
+  background-color: #2954d1;
+  transform: scale(1.02);
+}
+
+/* =================== STATS CARDS =================== */
 .stats-card {
   background-color: #222;
   padding: 1rem;
@@ -180,9 +194,17 @@ h2 {
   width: 60%;
 }
 
-.chart.bars .bar:nth-child(2) { width: 80%; }
-.chart.bars .bar:nth-child(3) { width: 45%; }
-.chart.bars .bar:nth-child(4) { width: 65%; }
+.chart.bars .bar:nth-child(2) {
+  width: 80%;
+}
+
+.chart.bars .bar:nth-child(3) {
+  width: 45%;
+}
+
+.chart.bars .bar:nth-child(4) {
+  width: 65%;
+}
 
 .chart.line {
   position: relative;
@@ -198,9 +220,7 @@ h2 {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150"><polyline fill="none" stroke="%234f7bff" stroke-width="2" points="0,120 40,100 80,110 120,70 160,80 200,60 240,75 280,65 300,55"/></svg>') no-repeat center/cover;
 }
 
-/* ===================
-   HELP CARD
-=================== */
+/* =================== HELP CARD =================== */
 .help-card {
   background-color: #222;
   padding: 1rem;
@@ -210,9 +230,7 @@ h2 {
   gap: 0.8rem;
 }
 
-/* ===================
-   BOTTOM NAV
-=================== */
+/* =================== BOTTOM NAV =================== */
 .bottom-nav.dev {
   position: fixed;
   bottom: 0;

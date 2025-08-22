@@ -17,6 +17,9 @@
       </svg>
       <span class="brand-name">Ludex</span>
     </div>
+
+    <!-- Botón Salir de modo desarrollador -->
+    <button class="btn-exit-dev" onclick="salirModoDesarrollador()">Salir de modo desarrollador</button>
   </header>
 
   <main class="main dev-page" id="mainContent">
@@ -47,7 +50,9 @@
         <p class="meta">Fecha de carga: 8 de agosto de 2023</p>
         <p class="desc">Compite en rápidas carreras épicas.</p>
         <div class="actions">
-          <button class="btn secondary small">Editar</button>
+          <button class="btn secondary small" onclick="window.location.href='edit-game.html'">
+              Editar
+          </button>
         </div>
       </article>
     </section>
@@ -107,7 +112,14 @@
   <!-- NAV INFERIOR (solo 2 botones; se mostrará solo en mobile vía CSS) -->
   <nav class="bottom-nav dev" aria-label="Navegación">
     <a class="nav-btn" aria-label="Inicio" href="index.html">🏠</a>
-    <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">📄</a>
+    <a class="nav-btn active" aria-label="Panel de desarrollador" href="./Profile.html">🚪</a>
   </nav>
+
+  <script>
+    function salirModoDesarrollador() {
+      // Aquí defines la lógica, por ejemplo, redirigir al inicio
+      window.location.href = "index.html"; 
+    }
+  </script>
 </body>
 </html>

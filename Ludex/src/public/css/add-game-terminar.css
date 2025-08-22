@@ -98,21 +98,30 @@ body {
   background-color: #254edb;
 }
 
-/* ===== Footer Navigation (Mobile) ===== */
+/* ===== Footer Navigation (Hidden by default) ===== */
 .bottom-nav {
-  display: flex;
+  display: none; /* oculto en escritorio */
   justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-width: 400px;
   background: #fff;
   border-top: 1px solid #eee;
   padding: 10px 0;
+  z-index: 10;
 }
 
 .bottom-nav a {
   font-size: 1.2rem;
   color: #333;
+  text-decoration: none;
 }
+
+/* ===== Responsive: Show footer in mobile ===== */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+  }
+}
+

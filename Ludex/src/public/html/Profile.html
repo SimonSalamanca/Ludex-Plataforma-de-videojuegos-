@@ -10,22 +10,17 @@
 <body>
   <!-- HEADER igual a Browse -->
   <header class="topbar">
+    
     <div class="topbar-left">
-      <!-- Botón menú -->
-      <button id="menuBtn" class="icon-btn" aria-label="Menu">
-        <svg width="20" height="20" viewBox="0 0 24 24">
-          <circle cx="6" cy="12" r="1.6"/>
-          <circle cx="12" cy="12" r="1.6"/>
-          <circle cx="18" cy="12" r="1.6"/>
-        </svg>
-      </button>
-
+      <a href="./browse.html" class="back-btn" aria-label="Volver al pago">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
       <!-- Logo -->
       <div class="brand">
         <svg class="brand-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden>
           <circle cx="12" cy="12" r="10" fill="#3366ff"/>
         </svg>
-        <span class="brand-name">Ludex</span>
+        <span class="brand-name"><a href="./browse.html">Ludex</a></span>
       </div>
     </div>
   </header>
@@ -57,17 +52,10 @@
 
     <nav class="profile-nav">
       <ul>
-        <li><a href="#" class="profile-item logout">Cerrar sesión <span class="arrow">›</span></a></li>
+        <li><a href="./index.html" class="profile-item logout">Cerrar sesión <span class="arrow">›</span></a></li>
       </ul>
     </nav>
   </main>
 
-  <!-- FOOTER igual a otras pantallas -->
-  <nav class="bottom-nav" aria-label="Navegación principal">
-    <button class="nav-btn" aria-label="Inicio">🏠</button>
-    <button class="nav-btn" aria-label="Notificaciones">🔔</button>
-    <button class="nav-btn" aria-label="Juegos deseados">⭐</button>
-    <button class="nav-btn active" aria-label="Perfil">👤</button>
-  </nav>
 </body>
 </html>

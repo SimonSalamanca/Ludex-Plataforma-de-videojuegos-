@@ -27,26 +27,20 @@
         <!-- Social buttons row: Google + Facebook -->
         <div class="social-row">
           <button class="btn social google" id="googleBtn" type="button" aria-label="Continuar con Google">
-
-            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden focusable="false" role="img">
-              <path fill="#EA4335" d="M24 9.5c3.9 0 6.6 1.7 8.1 3.1l6-5.8C35 4 30.9 2 24 2 14.9 2 7.6 7 4 14.2l7.4 5.7C13 15.1 18 9.5 24 9.5z"/>
-              <path fill="#34A853" d="M46.5 24.5c0-1.6-.2-2.8-.6-4H24v8h12.7c-.5 3-2.3 5.6-5 7.1l7.7 6c4.5-4.2 7.1-10.3 7.1-17.1z"/>
-              <path fill="#4A90E2" d="M11.4 28.9c-.6-1.7-1-3.5-1-5.4 0-1.9.4-3.7 1-5.4L4 12.4C1.4 16.2 0 20.9 0 26c0 5.1 1.4 9.8 4 13.6l7.4-5.7z"/>
-              <path fill="#FBBC05" d="M24 44c6.9 0 12.9-2.4 17.3-6.5l-8.8-6.8C29.9 32.3 27.1 33 24 33c-6 0-11-5.6-12.6-13.3L3.9 27.6C7.6 35 14.7 44 24 44z"/>
-            </svg>
+            <!-- icon -->
             Continue with Google
           </button>
 
           <button class="btn social fb" id="facebookBtn" type="button" aria-label="Continuar con Facebook">
-
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false" role="img">
-              <path fill="#1877F2" d="M22 12.1C22 6.5 17.5 2 11.9 2S2 6.5 2 12.1c0 5 3.7 9.1 8.6 9.9v-7h-2.6v-2.9H10.6V9.7c0-2.6 1.6-4 4-4 1.2 0 2.4.2 2.4.2v2.7h-1.4c-1.4 0-1.8.9-1.8 1.8v2.1h3l-.5 2.9h-2.4v7C18.3 21.2 22 17.1 22 12.1z"/>
-            </svg>
+            <!-- icon -->
             Continue with Facebook
           </button>
         </div>
 
         <div class="divider"><span>or</span></div>
+
+        <!-- Mensajes (errores / éxito) -->
+        <div id="formMessage" role="status" aria-live="polite"></div>
 
         <form id="registerForm" class="form" autocomplete="on" novalidate>
           <div class="grid two-col name-username">
@@ -70,18 +64,20 @@
             <label class="field">
               <span class="field-label">Password</span>
               <div class="pw-wrapper">
-                <input id="password" type="password" name="password" placeholder="Create password" minlength="6" required>
-                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="password">
+                <!-- minlength incrementado a 8 -->
+                <input id="password" type="password" name="password" placeholder="Create password" minlength="8" required>
+                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="password" aria-pressed="false">
                   <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 5c-7 0-11 6-11 7s4 7 11 7 11-6 11-7-4-7-11-7z" fill="none" stroke="#6b7280" stroke-width="1.2"/><circle cx="12" cy="12" r="3" fill="#6b7280"/></svg>
                 </button>
               </div>
+              <small class="password-hint">Mínimo 8 caracteres, incluyendo mayúscula, minúscula, número y símbolo.</small>
             </label>
 
             <label class="field">
               <span class="field-label">Confirm Password</span>
               <div class="pw-wrapper">
-                <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
-                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="confirmPassword">
+                <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm password" minlength="8" required>
+                <button type="button" class="pw-toggle" aria-label="Mostrar contraseña" data-target="confirmPassword" aria-pressed="false">
                   <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden focusable="false"><path d="M12 5c-7 0-11 6-11 7s4 7 11 7 11-6 11-7-4-7-11-7z" fill="none" stroke="#6b7280" stroke-width="1.2"/><circle cx="12" cy="12" r="3" fill="#6b7280"/></svg>
                 </button>
               </div>
@@ -95,19 +91,21 @@
 
           <div class="grid two-col">
             <label class="field">
-              <span class="field-label">Date of Birth (Optional)</span>
-              <input type="date" name="dob" aria-label="Date of birth">
+              <span class="field-label">Date of Birth</span>
+              <!-- DOB ahora es REQUIRED (imprescindible para bloqueo menores 13) -->
+              <input type="date" name="dob" aria-label="Date of birth" required>
             </label>
 
             <label class="field">
               <span class="field-label">Country</span>
               <select name="country" required>
                 <option value="">Select your country</option>
-                <option>Colombia</option>
-                <option>Chile</option>
-                <option>Argentina</option>
-                <option>United States</option>
-                <option>Spain</option>
+                <!-- RECOMENDADO: usar IDs si dispones de tabla paises -->
+                <option value="1">Colombia</option>
+                <option value="2">Chile</option>
+                <option value="3">Argentina</option>
+                <option value="4">United States</option>
+                <option value="5">Spain</option>
               </select>
             </label>
           </div>
@@ -116,7 +114,6 @@
           <div class="field">
             <span class="field-label">Gaming Interests</span>
             <div class="interests" role="group" aria-label="Gaming interests">
-              <!-- accessible structure: input + span; label wraps both so clicking works -->
               <label class="pill"><input type="checkbox" name="interest" value="Action"><span>Action</span></label>
               <label class="pill"><input type="checkbox" name="interest" value="RPG"><span>RPG</span></label>
               <label class="pill"><input type="checkbox" name="interest" value="Strategy"><span>Strategy</span></label>
@@ -141,7 +138,7 @@
   </main>
 
   <script>
-
+    // Mostrar/ocultar contraseñas (sin cambios funcionales)
     document.querySelectorAll('.pw-toggle').forEach(function(btn){
       btn.addEventListener('click', function(){
         var targetId = btn.dataset.target;
@@ -157,27 +154,130 @@
       });
     });
 
-
-    document.getElementById('registerForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      var pw = document.getElementById('password').value;
-      var cpw = document.getElementById('confirmPassword').value;
-      var terms = document.querySelector('input[name="terms"]').checked;
-      if(pw !== cpw){
-        alert('Passwords do not match.');
-        return;
-      }
-      if(!terms){
-        alert('You must accept the terms.');
-        return;
-      }
-
-      alert('Cuenta creada (placeholder).');
-    });
-
-    // social placeholders
+    // Placeholder social sign-in
     document.getElementById('googleBtn').addEventListener('click', function(){ alert('Google sign-in (placeholder)'); });
     document.getElementById('facebookBtn').addEventListener('click', function(){ alert('Facebook sign-in (placeholder)'); });
+
+    // NUEVO handler: validaciones cliente + fetch al backend
+    (function(){
+      const form = document.getElementById('registerForm');
+      const msgBox = document.getElementById('formMessage');
+      const createBtn = document.getElementById('createBtn');
+
+      function showMessage(text, type='error'){
+        msgBox.innerHTML = `<div class="${type === 'error' ? 'msg-error' : 'msg-success'}">${text}</div>`;
+      }
+      function clearMessage(){ msgBox.innerHTML = ''; }
+
+      function passwordStrong(pw) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(pw);
+      }
+
+      function ageAtLeast(dateString, minYears=13) {
+        if (!dateString) return false;
+        const dob = new Date(dateString);
+        const now = new Date();
+        let age = now.getFullYear() - dob.getFullYear();
+        const m = now.getMonth() - dob.getMonth();
+        if (m < 0 || (m === 0 && now.getDate() < dob.getDate())) age--;
+        return age >= minYears;
+      }
+
+      async function handleSubmit(e){
+        e.preventDefault();
+        clearMessage();
+
+        // valores del form
+        const fullname = form.querySelector('input[name="fullname"]').value.trim();
+        const username = form.querySelector('input[name="username"]').value.trim();
+        const email = form.querySelector('input[name="email"]').value.trim();
+        const password = form.querySelector('input[name="password"]').value;
+        const confirmPassword = form.querySelector('input[name="confirmPassword"]').value;
+        const phone = form.querySelector('input[name="phone"]').value.trim();
+        const dob = form.querySelector('input[name="dob"]').value;
+        const country = form.querySelector('select[name="country"]').value; // aquí enviamos value (recomendado: pais_id)
+        const interests = Array.from(form.querySelectorAll('input[name="interest"]:checked')).map(i => i.value);
+        const terms = form.querySelector('input[name="terms"]').checked;
+
+        // validaciones básicas
+        if (!fullname || !username || !email || !password || !confirmPassword || !country) {
+          showMessage('Completa todos los campos obligatorios.', 'error');
+          return;
+        }
+        if (password !== confirmPassword) {
+          showMessage('Las contraseñas no coinciden.', 'error');
+          return;
+        }
+        if (!passwordStrong(password)) {
+          showMessage('La contraseña debe tener mínimo 8 caracteres, incluir mayúscula, minúscula, número y símbolo.', 'error');
+          return;
+        }
+        if (!terms) {
+          showMessage('Debes aceptar los términos de servicio.', 'error');
+          return;
+        }
+        if (!dob) {
+          showMessage('Por favor indica tu fecha de nacimiento.', 'error');
+          return;
+        }
+        if (!ageAtLeast(dob, 13)) {
+          showMessage('Debes tener al menos 13 años para registrarte.', 'error');
+          return;
+        }
+
+        // deshabilitar botón para evitar doble envío
+        createBtn.disabled = true;
+        createBtn.classList.add('btn-disabled');
+        createBtn.textContent = 'Registrando...';
+
+        // Payload: usa nombres en español para mapear con tu DB/backend
+        const payload = {
+          usuario: username,
+          correo_electronico: email,
+          password: password,
+          confirm_password: confirmPassword,    // nombre que espera el backend
+          nombre_completo: fullname,
+          fecha_nacimiento: dob,
+          telefono: phone || null,
+          pais_id: country || null,
+          acepto_terminos: terms ? 1 : 0,
+          intereses: interests // opcional, no rompe si el backend lo ignora
+        };
+
+        try {
+          const resp = await fetch('http://localhost:3000/api/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const body = await resp.json().catch(()=>({}));
+
+          if (!resp.ok) {
+            // Preferir error devuelto por backend
+            const err = body.error || body.message || `Error ${resp.status}`;
+            showMessage(err, 'error');
+            createBtn.disabled = false;
+            createBtn.classList.remove('btn-disabled');
+            createBtn.textContent = 'Create Account';
+            return;
+          }
+
+          // éxito
+          showMessage('Registro exitoso. Revisa tu correo para activar la cuenta.', 'success');
+          form.reset();
+        } catch (err) {
+          console.error(err);
+          showMessage('Error de red. Intenta nuevamente más tarde.', 'error');
+        } finally {
+          createBtn.disabled = false;
+          createBtn.classList.remove('btn-disabled');
+          createBtn.textContent = 'Create Account';
+        }
+      }
+
+      form.addEventListener('submit', handleSubmit);
+    })();
   </script>
 </body>
 </html>
+

@@ -219,3 +219,49 @@ input:focus, select:focus{box-shadow:0 6px 20px rgba(51,102,255,0.06); border-co
 
 /* focus */
 button:focus, a:focus, input:focus{outline:3px solid rgba(51,102,255,0.12);outline-offset:2px}
+
+/* ---------------------------
+   ADICIONES MÍNIMAS (no cambian la estética)
+   - soporte para mensajes (success/error)
+   - hint de contraseña
+   - estilo botón deshabilitado
+   --------------------------- */
+
+/* Contenedor de mensajes en el formulario */
+#formMessage { margin: 8px 0 12px; }
+
+/* Mensaje de error (sutil, acorde a paleta) */
+.msg-error {
+  background: rgba(255,245,245,0.9); /* very light red tint */
+  color: #8b1e1e;
+  border: 1px solid rgba(235,87,87,0.15);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Mensaje de éxito (sutil, acorde a paleta) */
+.msg-success {
+  background: rgba(240,255,244,0.95); /* very light green tint */
+  color: #0f5132;
+  border: 1px solid rgba(34,197,94,0.12);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* Hint textual para contraseña (inline) */
+.password-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Estilo para botón deshabilitado / loading (mantiene estética) */
+.btn[disabled],
+.btn.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}

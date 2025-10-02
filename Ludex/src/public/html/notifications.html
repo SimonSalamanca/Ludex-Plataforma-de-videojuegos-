@@ -11,6 +11,11 @@
   <!-- Font Awesome (iconos) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (opcional para chevrón / iconos) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.4/font/bootstrap-icons.css" rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="../css/views.css">
 </head>
@@ -39,66 +44,129 @@
 </header>
 
 
-  <!-- Main content -->
-  <main class="container" id="mainContent">
-    <section class="notif-section">
-      <h2 class="section-title">Hoy</h2>
+  <!-- Main content (reemplazado por la versión con Bootstrap collapse) -->
+  <main class="container py-4" id="mainContent" style="max-width:900px;">
 
-      <ul class="notif-list">
-        <li class="notif-item">
-          <img class="thumb" src="images/game1.jpg" alt="Juego mini">
-          <div class="notif-content">
-            <div class="notif-head">
-              <strong class="notif-title">Nuevos Juegos Lanzados</strong>
-              <time class="time">1h</time>
+    <section class="mb-4">
+      <h2 class="h6 mb-3 fw-semibold">Hoy</h2>
+
+      <ul class="list-group">
+        <!-- ITEM 1 -->
+        <li class="list-group-item d-flex gap-3 align-items-start" id="item-1">
+          <img src="https://picsum.photos/seed/game1/120/120" alt="Juego" width="64" height="64" class="flex-shrink-0 rounded">
+          <div class="flex-grow-1 min-width-0">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="me-3 min-width-0">
+                <div class="fw-bold text-truncate">Nuevos Juegos Lanzados</div>
+                <div class="text-muted small text-truncate">Ludex Actualizaciones — 2 juegos añadidos</div>
+                <div class="text-muted small mt-1">Hace 1h</div>
+              </div>
+
+              <!-- Chevrón controla collapse (Bootstrap data attributes) -->
+              <div class="ms-2">
+                <button class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#detail-1"
+                        aria-expanded="false"
+                        aria-controls="detail-1"
+                        title="Ver detalles">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
-            <p class="notif-sub">Ludex Actualizaciones — 2 juegos añadidos</p>
-            <div class="notif-actions">
-              <button class="btn-ghost small">+</button>
-              <button class="btn-ghost small">🔗</button>
-              <button class="btn-play small" aria-label="Play">▶</button>
+
+            <div class="collapse mt-3" id="detail-1">
+              <div class="border rounded bg-white p-3">
+                <p class="mb-2"><strong>Starbound Arena</strong> y <strong>Moon Raider</strong> ya disponibles: trailer, modo cooperativo y demo.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-primary" onclick="openNotif('item-1')">Abrir</button>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="markRead('item-1')">Marcar leído</button>
+                  <button class="btn btn-sm btn-link text-danger" onclick="dismiss('item-1')">Descartar</button>
+                </div>
+              </div>
             </div>
           </div>
         </li>
 
-        <li class="notif-item">
-          <img class="thumb" src="images/game2.jpg" alt="Juego mini">
-          <div class="notif-content">
-            <div class="notif-head">
-              <strong class="notif-title">Mis juegos favoritos</strong>
-              <time class="time">2h</time>
+        <!-- ITEM 2 -->
+        <li class="list-group-item d-flex gap-3 align-items-start" id="item-2">
+          <img src="https://picsum.photos/seed/game2/120/120" alt="Juego" width="64" height="64" class="flex-shrink-0 rounded">
+          <div class="flex-grow-1 min-width-0">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="me-3 min-width-0">
+                <div class="fw-bold text-truncate">Mis juegos favoritos</div>
+                <div class="text-muted small text-truncate">Jugador Entusiasta — Nueva reseña</div>
+                <div class="text-muted small mt-1">Hace 2h</div>
+              </div>
+
+              <div class="ms-2">
+                <button class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#detail-2"
+                        aria-expanded="false"
+                        aria-controls="detail-2"
+                        title="Ver detalles">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
-            <p class="notif-sub">Jugador Entusiasta — Nueva reseña</p>
-            <div class="notif-actions">
-              <button class="btn-ghost small">+</button>
-              <button class="btn-ghost small">💬</button>
-              <button class="btn-play small" aria-label="Play">▶</button>
+
+            <div class="collapse mt-3" id="detail-2">
+              <div class="border rounded bg-white p-3">
+                <p class="mb-2">La reseña destaca mejoras en jugabilidad y balance. Puntuación: 8.7/10.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-primary" onclick="openNotif('item-2')">Leer reseña</button>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="markRead('item-2')">Marcar leído</button>
+                  <button class="btn btn-sm btn-link text-danger" onclick="dismiss('item-2')">Descartar</button>
+                </div>
+              </div>
             </div>
           </div>
         </li>
       </ul>
     </section>
 
-    <section class="notif-section">
-      <h2 class="section-title">Anterior</h2>
-      <ul class="notif-list">
-        <li class="notif-item">
-          <img class="thumb" src="images/game3.jpg" alt="Juego mini">
-          <div class="notif-content">
-            <div class="notif-head">
-              <strong class="notif-title">Cómo funcionan los modos</strong>
-              <time class="time">18 d</time>
+    <section>
+      <h2 class="h6 mb-3 fw-semibold">Anterior</h2>
+
+      <ul class="list-group">
+        <li class="list-group-item d-flex gap-3 align-items-start opacity-75" id="item-3">
+          <img src="https://picsum.photos/seed/game3/120/120" alt="Juego" width="64" height="64" class="flex-shrink-0 rounded">
+          <div class="flex-grow-1 min-width-0">
+            <div class="d-flex align-items-start justify-content-between">
+              <div class="me-3 min-width-0">
+                <div class="fw-bold text-truncate">Cómo funcionan los modos</div>
+                <div class="text-muted small text-truncate">Experto Fiscal — guía rápida</div>
+                <div class="text-muted small mt-1">Hace 18 d</div>
+              </div>
+
+              <div class="ms-2">
+                <button class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#detail-3"
+                        aria-expanded="false"
+                        aria-controls="detail-3"
+                        title="Ver detalles">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </div>
             </div>
-            <p class="notif-sub">Experto Fiscal — guía rápida</p>
-            <div class="notif-actions">
-              <button class="btn-ghost small">+</button>
-              <button class="btn-ghost small">🔖</button>
-              <button class="btn-play small" aria-label="Play">▶</button>
+
+            <div class="collapse mt-3" id="detail-3">
+              <div class="border rounded bg-white p-3">
+                <p class="mb-2">Guía sobre modos de juego: diferencias entre competitivo, cooperativo y eventos temporales.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-primary" onclick="openNotif('item-3')">Abrir guía</button>
+                  <button class="btn btn-sm btn-outline-secondary" onclick="markRead('item-3')">Marcar leído</button>
+                  <button class="btn btn-sm btn-link text-danger" onclick="dismiss('item-3')">Descartar</button>
+                </div>
+              </div>
             </div>
           </div>
         </li>
       </ul>
     </section>
+
   </main>
 
   <!-- bottom nav  -->
@@ -112,6 +180,9 @@
     </a>
 
   </nav>
+
+  <!-- Bootstrap JS bundle (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script src="../js/browse.js" defer></script>
 </body>

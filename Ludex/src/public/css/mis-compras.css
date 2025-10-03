@@ -1,3 +1,4 @@
+/* mis-compras.css */
 :root{
   --bg:#f5f6fa;
   --text:#0f1115;
@@ -32,44 +33,11 @@ body{
   flex:1; text-align:center; font-size:1.25rem; font-weight:700; margin:0; color:#000;
 }
 
-/* Botón menú (solo escritorio) */
-.menu-icon{
-  display:none; /* visible en desktop vía media query */
-  font-size:1.25rem; color:#111; cursor:pointer;
+/* Nota: el botón de menú está fijo vía submenu.css (.menu-icon-button).
+   Para evitar que el botón tape el título en pantallas pequeñas, ajustamos el padding del topbar en móvil. */
+@media (max-width:900px){
+  .topbar{ padding-left:64px; } /* deja espacio para el botón fijo en la esquina izquierda */
 }
-
-/* Checkbox hack */
-.menu-toggle{ position:absolute; opacity:0; pointer-events:none; }
-
-/* ===== Submenú lateral (escritorio) ===== */
-.submenu{
-  position:fixed; inset:0 auto 0 0; /* top:0; left:0; height:100vh */
-  width:260px; height:100vh;
-  background:#fff;
-  border-right:1px solid var(--stroke);
-  box-shadow:2px 0 8px rgba(0,0,0,.06);
-  padding:70px 16px 16px; /* espacio para el header sticky */
-  display:flex; flex-direction:column; gap:4px;
-  transform:translateX(-100%); transition:transform .28s ease;
-  z-index:18; /* por debajo del header */
-}
-.submenu a{
-  display:flex; align-items:center; gap:10px;
-  padding:10px 12px; border-radius:10px;
-  color:#1f2937; text-decoration:none; font-weight:600; font-size:.95rem;
-}
-.submenu a:hover{ background:#f3f4f6; }
-
-/* Abrir con :checked */
-.menu-toggle:checked ~ .submenu{ transform:translateX(0); }
-
-/* Overlay para cerrar al click fuera */
-.overlay{
-  position:fixed; inset:0;
-  background:rgba(0,0,0,.35);
-  display:none; z-index:17;
-}
-.menu-toggle:checked ~ .overlay{ display:block; }
 
 /* ===== Contenido principal ===== */
 .container{
@@ -124,32 +92,9 @@ body{
   color:var(--muted); cursor:pointer;
 }
 
-/* ===== Menú inferior (solo móvil) ===== */
-.bottom-nav{ display:none; }
-@media (max-width:900px){
-  .bottom-nav{
-    position:fixed; bottom:0; left:0; right:0; z-index:30;
-    display:flex; justify-content:space-around; align-items:center;
-    background:#fff; border-top:1px solid var(--stroke); padding:8px 0;
-  }
-  .bottom-nav .nav-item{
-    display:flex; flex-direction:column; align-items:center; gap:2px;
-    font-size:.78rem; color:#5b6679; text-decoration:none;
-  }
-  .bottom-nav .nav-item i{ font-size:1.25rem; }
-  body{ padding-bottom:68px; } /* espacio para el bottom nav */
+/* Responsive tweaks: si tu layout necesita otro comportamiento en xs, agrega aquí */
+@media (max-width:480px){
+  .compra-card{ padding:10px; min-height:100px; }
+  .compra-card img{ width:72px; height:72px; }
 }
 
-/* ===== Responsive rules ===== */
-/* Escritorio: mostrar botón menú + submenu con overlay; contenido SIEMPRE centrado */
-@media (min-width:901px){
-  .menu-icon{ display:inline-flex; align-items:center; justify-content:center; }
-  /* submenu controlado por checkbox; overlay visible sólo en desktop */
-}
-
-/* Móvil: ocultar completamente menú lateral y el botón */
-@media (max-width:900px){
-  .menu-icon{ display:none; }
-  .submenu{ display:none; }
-  .overlay{ display:none !important; }
-}

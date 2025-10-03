@@ -11,19 +11,23 @@
   <!-- Font Awesome (iconos) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- CSS de la vista -->
   <link rel="stylesheet" href="../css/views.css">
+
+  <!-- CSS del submenú (asegúrate la ruta sea correcta) -->
+  <link rel="stylesheet" href="../css/submenu.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="page-header">
     <div class="page-left">
-      <!-- pequeño círculo/brand como en la imagen -->
+      <!-- pequeño círculo/brand -->
       <svg class="brand-mark" width="14" height="14" viewBox="0 0 24 24" aria-hidden>
         <circle cx="12" cy="12" r="10" fill="#3366ff"/>
       </svg>
 
-      <!-- título de la sección (cámbialo por cada página) -->
-      <span class="page-title">Jueegos deseados</span>
+      <!-- título de la sección -->
+      <span class="page-title">Juegos deseados</span>
     </div>
 
     <!-- icons a la derecha (carrito + perfil) -->
@@ -37,6 +41,8 @@
     </div>
   </header>
 
+  <!-- Placeholder para inyectar el submenú (botón, overlay, nav lateral y bottom-nav móvil) -->
+  <div id="submenu-container"></div>
 
   <!-- Main content -->
   <main class="container" id="mainContent">
@@ -64,19 +70,10 @@
     </section>
   </main>
 
-  <!-- bottom nav (igual estilo que en browse) -->
-  <nav class="bottom-nav" aria-label="Navegación principal">
-    <a href="./browse.html" class="nav-item" data-section="home"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
-    <a href="./notifications.html" class="nav-item" data-section="notifications"><i class="fa-solid fa-bell"></i><span>Alertas</span></a>
-    <a href="./wishlist.html" class="nav-item active" data-section="wishlist"><i class="fa-solid fa-star"></i><span>Favoritos</span></a>
-    <a href="./library.html" class="nav-item" data-section="library" title="Biblioteca" aria-label="Biblioteca">
-      <i class="fa-solid fa-book" aria-hidden></i>
-      <span>Biblioteca</span>
-    </a>
-
-  </nav>
-
-  <!-- sincroniza visuales si usas browse.js -->
+  <!-- script de la vista (si aplica) -->
   <script src="../js/browse.js" defer></script>
+
+  <!-- Script que carga el submenú (asegúrate la ruta sea la correcta desde esta vista) -->
+  <script src="../js/submenu.js"></script>
 </body>
 </html>

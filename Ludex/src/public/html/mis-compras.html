@@ -7,7 +7,7 @@
 
   <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Iconos -->
+  <!-- Iconos (solo 1 vez por página) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Estilos propios -->
   <link rel="stylesheet" href="../css/mis-compras.css">
@@ -15,23 +15,13 @@
   <link rel="stylesheet" href="../css/submenu.css">
 </head>
 <body>
-  <!-- Toggle del menú (checkbox hack, oculto) -->
-  <input type="checkbox" id="menuToggle" class="menu-toggle" aria-hidden="true">
-
   <!-- Encabezado -->
   <header class="topbar">
-    <!-- Botón de menú -->
-    <label for="menuToggle" class="menu-icon" aria-label="Abrir menú" role="button">
-      <i class="fa-solid fa-bars"></i>
-    </label>
     <h1>Mis Compras</h1>
   </header>
 
-  <!-- Submenú lateral cargado dinámicamente -->
+  <!-- Placeholder donde se inyectará el submenu (submenú aportará botón, overlay, nav lateral y bottom-nav) -->
   <div id="submenu-container"></div>
-
-  <!-- Overlay para cerrar menú al hacer clic fuera -->
-  <label for="menuToggle" class="overlay" aria-hidden="true"></label>
 
   <!-- Contenido principal -->
   <main class="container">
@@ -76,14 +66,6 @@
       </article>
     </div>
   </main>
-
-  <!-- Menú inferior (solo móvil) -->
-  <nav class="bottom-nav" aria-label="Navegación inferior">
-    <a href="./browse.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
-    <a href="./notifications.html" class="nav-item"><i class="fa-solid fa-bell"></i><span>Alertas</span></a>
-    <a href="./wishlist.html" class="nav-item"><i class="fa-solid fa-star"></i><span>Favoritos</span></a>
-    <a href="./carrito.html" class="nav-item"><i class="fa-solid fa-cart-shopping"></i><span>Carrito</span></a>
-  </nav>
 
   <!-- Script para cargar dinámicamente el submenú -->
   <script src="../js/submenu.js"></script>

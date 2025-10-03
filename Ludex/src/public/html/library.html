@@ -11,7 +11,10 @@
   <!-- Font Awesome (iconos) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS -->
+  <!-- CSS del submenú (menú único) -->
+  <link rel="stylesheet" href="../css/submenu.css">
+
+  <!-- CSS de la vista -->
   <link rel="stylesheet" href="../css/views.css">
 </head>
 <body>
@@ -36,6 +39,9 @@
       </button>
     </div>
   </header>
+
+  <!-- Placeholder donde se inyectará el submenú (botón, overlay, nav lateral, bottom-nav) -->
+  <div id="submenu-container"></div>
 
   <!-- Main content-->
   <main class="container" id="mainContent">
@@ -84,29 +90,14 @@
     </section>
   </main>
 
-  <!-- bottom nav -->
-  <nav class="bottom-nav" aria-label="Navegación principal">
-    <a href="./browse.html" class="nav-item" data-section="home" title="Inicio" aria-label="Inicio">
-      <i class="fa-solid fa-house" aria-hidden></i>
-      <span>Inicio</span>
-    </a>
+  <!-- NOTA: se eliminó el <nav class="bottom-nav"> porque el submenu inyectado lo proveerá -->
 
-    <a href="./notifications.html" class="nav-item" data-section="notifications" title="Notificaciones" aria-label="Notificaciones">
-      <i class="fa-solid fa-bell" aria-hidden></i>
-      <span>Alertas</span>
-    </a>
-
-    <a href="./wishlist.html" class="nav-item" data-section="wishlist" title="Favoritos" aria-label="Favoritos">
-      <i class="fa-solid fa-star" aria-hidden></i>
-      <span>Favoritos</span>
-    </a>
-
-    <a href="./library.html" class="nav-item active" data-section="library" title="Biblioteca" aria-label="Biblioteca">
-      <i class="fa-solid fa-book" aria-hidden></i>
-      <span>Biblioteca</span>
-    </a>
-  </nav>
-
+  <!-- Scripts -->
+  <!-- script de la vista (se deja como estaba) -->
   <script src="../js/browse.js" defer></script>
+
+  <!-- script que monta el submenú único -->
+  <script src="../js/submenu.js" defer></script>
 </body>
 </html>
+

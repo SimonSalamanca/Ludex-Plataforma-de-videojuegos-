@@ -58,6 +58,11 @@ button { font-family: inherit; }
 }
 .icon-btn svg, .icon-btn i { width:20px; height:20px; opacity:.95; color:var(--primary); }
 
+/* Dejar espacio para el botón fijo del submenu en pantallas pequeñas */
+@media (max-width: 900px) {
+  .topbar { padding-left: 64px; } /* coincide con .menu-icon-button del submenu */
+}
+
 /* ===== LAYOUT (main) ===== */
 .main {
   padding:12px;
@@ -228,3 +233,12 @@ button:focus, a:focus, .bottom-nav .nav-item:focus {
 @media (min-width: var(--bp-desktop)) {
   .main { padding-top:18px; padding-bottom:32px; }
 }
+
+/* Ocultar menú lateral en pantallas pequeñas (celular) */
+@media (max-width: 768px) {
+  .side-nav {
+    display: none !important;
+  }
+}
+
+

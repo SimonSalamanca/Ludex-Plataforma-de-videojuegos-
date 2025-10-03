@@ -24,7 +24,7 @@ img{max-width:100%;display:block}
   align-items:center;
   justify-content:space-between;
   padding:10px 16px;
-  border-bottom:1px solid rgba(15,23,42,0.04);
+ border-bottom:1px solid rgba(15,23,42,0.04);
   position:sticky;
   top:0;
   background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
@@ -39,54 +39,56 @@ img{max-width:100%;display:block}
   padding:12px;
   max-width:420px;
   margin:0 auto;
-  padding-bottom:96px; 
+  padding-bottom:96px;
 }
 
-/* bottom nav (estilo compartido con browse) */
-body .bottom-nav{
-  position:fixed !important;
-  left:0;
-  right:0;
-  bottom:0;
-  height:68px;
-  background:var(--card);
-  border-top:1px solid rgba(15,23,42,0.04);
-  display:flex !important;
-  align-items:center;
-  justify-content:space-around;
-  padding:8px 10px;
-  z-index:120;
-  box-shadow: 0 -8px 30px rgba(16,24,40,0.04);
-  border-radius:12px 12px 0 0;
-}
-body .bottom-nav .nav-item{
-  display:flex !important;
-  flex-direction:column;
-  align-items:center;
-  gap:6px;
-  font-size:.78rem;
-  color:#5b6679;
-  width:64px;
-  justify-content:center;
-  transition:color .12s ease;
-}
-body .bottom-nav .nav-item i, body .bottom-nav .nav-item svg{
-  display:grid;
-  place-items:center;
-  width:36px;
-  height:36px;
-  border-radius:999px;
-  border:2px solid transparent;
-  background:transparent;
-  font-size:16px;
-  color:#5b6679;
-}
-body .bottom-nav .nav-item.active{ color: var(--accent); font-weight:700; }
-body .bottom-nav .nav-item.active i, body .bottom-nav .nav-item.active svg{
-  background: linear-gradient(90deg,var(--accent),var(--accent-2));
-  color:#fff;
-  box-shadow:0 8px 24px rgba(51,102,255,0.12);
-  border-color:transparent;
+/* bottom nav (estilo compartido con browse) - móvil solamente */
+@media (max-width: 900px) {
+  body .bottom-nav{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    height:68px;
+    background:var(--card);
+    border-top:1px solid rgba(15,23,42,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:8px 10px;
+    z-index:120;
+    box-shadow: 0 -8px 30px rgba(16,24,40,0.04);
+    border-radius:12px 12px 0 0;
+  }
+  body .bottom-nav .nav-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    font-size:.78rem;
+    color:#5b6679;
+    width:64px;
+    justify-content:center;
+    transition:color .12s ease;
+  }
+  body .bottom-nav .nav-item i, body .bottom-nav .nav-item svg{
+    display:grid;
+    place-items:center;
+    width:36px;
+    height:36px;
+    border-radius:999px;
+    border:2px solid transparent;
+    background:transparent;
+    font-size:16px;
+    color:#5b6679;
+  }
+  body .bottom-nav .nav-item.active{ color: var(--accent); font-weight:700; }
+  body .bottom-nav .nav-item.active i, body .bottom-nav .nav-item.active svg{
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:#fff;
+    box-shadow:0 8px 24px rgba(51,102,255,0.12);
+    border-color:transparent;
+  }
 }
 
 /* ===== Notificaciones / Wishlist styles (compartidos) ===== */
@@ -102,7 +104,7 @@ body .bottom-nav .nav-item.active i, body .bottom-nav .nav-item.active svg{
 .notif-sub{margin:6px 0 8px;color:var(--muted);font-size:13px}
 .notif-actions{display:flex;gap:8px;align-items:center}
 .btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:6px 8px;border-radius:8px;cursor:pointer}
-.btn-play{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:0;padding:6px 10px;border-radius:8px;cursor:pointer}
+.btn-play{background:linear-gradient(90deg,var(--accent),var(--accent-2));Color:white;border:0;padding:6px 10px;border-radius:8px;cursor:pointer}
 .small{font-size:13px}
 
 /* Wishlist / Thumb grid */
@@ -197,4 +199,9 @@ button:focus, a:focus, input:focus{ outline:3px solid rgba(51,102,255,0.12); out
 
 @media (min-width:900px) {
   .page-title { font-size:18px; }
+}
+
+/* --- Ajuste: deja espacio para el botón fijo del submenú en pantallas pequeñas --- */
+@media (max-width:900px){
+  .page-header { padding-left:64px; } /* evita que el botón fijo tape el título */
 }
